@@ -1,21 +1,24 @@
 import { Module } from '@nestjs/common';
 import { MailerModule } from '@nestjs-modules/mailer';
 import { EmailService } from './email.service';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot(),
     MailerModule.forRoot({
       transport: {
         host: 'smtp.gmail.com',
-        port: 587,
-        secure: false,
+        port: 465,
+        ignoreTLS: true,
+        secure: true,
         auth: {
-          user: 'your-email@gmail.com',
-          pass: 'your-password',
+          user: process.env.EMAIL,
+          pass: process.env.PASSWORD,
         },
-      },
-      defaults: {
-        from: '"No Reply" <no-reply@example.com>',
+        default: {
+          from: 'tim@deletter.com',
+        },
       },
     }),
   ],

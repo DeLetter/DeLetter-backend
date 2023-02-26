@@ -15,6 +15,7 @@ async function bootstrap() {
           route: {
             path: layer.route?.path,
             method: layer.route?.stack[0].method,
+            requestData: layer.route?.stack[0].handle?.name,
           },
         };
       }

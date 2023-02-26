@@ -6,10 +6,14 @@ export class EmailService {
   constructor(private readonly mailerService: MailerService) {}
 
   async sendEmail(to: string, subject: string, message: string) {
-    await this.mailerService.sendMail({
+    console.log('to', to);
+    console.log('subject', subject);
+    console.log('message', message);
+    const response = await this.mailerService.sendMail({
       to,
       subject,
       text: message,
     });
+    console.log(response);
   }
 }
