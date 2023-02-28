@@ -16,8 +16,8 @@ import { ConfigModule } from '@nestjs/config';
           user: process.env.EMAIL,
           pass: process.env.PASSWORD,
         },
-        default: {
-          from: 'tim@deletter.com',
+        defaults: {
+          from: '"tim from DeLetter" <shentimothy89@gmail.com>',
         },
       },
     }),
