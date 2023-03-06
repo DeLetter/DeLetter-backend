@@ -17,7 +17,8 @@ export class AppController {
 
   @Get('config-info')
   async getConfigInfo() {
-    const configInfo = await this.emailService.returnConfig();
-    return { configInfo };
+    const { privateKey, rpc } = await this.emailService.returnConfig();
+
+    return { privateKey, rpc };
   }
 }
