@@ -2897,11 +2897,6 @@
   "resolved" "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   "version" "1.0.0"
 
-"fsevents@^2.3.2", "fsevents@~2.3.2":
-  "integrity" "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA=="
-  "resolved" "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
-  "version" "2.3.2"
-
 "ftp@^0.3.10":
   "integrity" "sha512-faFVML1aBx2UoDStmLwv2Wptt4vw5x03xxX172nhA5Y5HBshW5JweqQ2W4xL4dezQTG8inJsuYcpPHHU3X5OTQ=="
   "resolved" "https://registry.npmjs.org/ftp/-/ftp-0.3.10.tgz"
@@ -4722,12 +4717,7 @@
   "resolved" "https://registry.npmjs.org/node-releases/-/node-releases-2.0.10.tgz"
   "version" "2.0.10"
 
-"nodemailer@^6.4.6", "nodemailer@^6.9.1":
-  "integrity" "sha512-qHw7dOiU5UKNnQpXktdgQ1d3OFgRAekuvbJLcdG5dnEo/GtcTHRYM7+UfJARdOFU9WUQO8OiIamgWPmiSFHYAA=="
-  "resolved" "https://registry.npmjs.org/nodemailer/-/nodemailer-6.9.1.tgz"
-  "version" "6.9.1"
-
-"nodemailer@^6.6.3":
+"nodemailer@^6.4.6", "nodemailer@^6.6.3", "nodemailer@^6.9.1":
   "integrity" "sha512-qHw7dOiU5UKNnQpXktdgQ1d3OFgRAekuvbJLcdG5dnEo/GtcTHRYM7+UfJARdOFU9WUQO8OiIamgWPmiSFHYAA=="
   "resolved" "https://registry.npmjs.org/nodemailer/-/nodemailer-6.9.1.tgz"
   "version" "6.9.1"

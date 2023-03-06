@@ -1,6 +1,5 @@
 import { Controller, Post, Body, Get, Query } from '@nestjs/common';
 import { EmailService } from './email/email.service';
-import { MailerService } from '@nestjs-modules/mailer';
 
 @Controller()
 export class AppController {
@@ -14,5 +13,11 @@ export class AppController {
 
     await this.emailService.sendEmail(to, subject, message);
     return { message: 'Email sent successfully' };
+  }
+
+  @Get('config-info')
+  async getConfigInfo() {
+    const configInfo = await this.emailService.returnConfig();
+    return { configInfo };
   }
 }

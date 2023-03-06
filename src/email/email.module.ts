@@ -22,7 +22,15 @@ import { ConfigModule } from '@nestjs/config';
       },
     }),
   ],
-  providers: [EmailService],
+  providers: [
+    EmailService,
+    {
+      provide: 'DATABASE_CONFIG',
+      useFactory: () => ({
+        privateKey: process.env.PRIVATE_KEY,
+      }),
+    },
+  ],
   exports: [EmailService],
 })
 export class EmailModule {}

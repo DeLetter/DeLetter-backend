@@ -1,9 +1,13 @@
 import { Injectable } from '@nestjs/common';
 import { MailerService } from '@nestjs-modules/mailer';
+import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class EmailService {
-  constructor(private readonly mailerService: MailerService) {}
+  constructor(
+    private readonly mailerService: MailerService,
+    private readonly configService: ConfigService,
+  ) {}
 
   async sendEmail(to: string, subject: string, message: string) {
     await this.mailerService.sendMail({
@@ -12,5 +16,10 @@ export class EmailService {
       subject,
       text: message,
     });
+  }
+
+  async returnConfig() {
+    console.log(this.configService.get('DATABASE_CONFIG.privateKey'));
+    return this.configService.get('DATABASE_CONFIG');
   }
 }
