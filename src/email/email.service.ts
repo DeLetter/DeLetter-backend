@@ -19,7 +19,6 @@ export class EmailService {
   }
 
   async returnConfig() {
-    console.log(this.configService.get('DATABASE_CONFIG.privateKey'));
-    return this.configService.get('DATABASE_CONFIG');
+    return this.configService.get('PRIVATE_KEY');
   }
 }
