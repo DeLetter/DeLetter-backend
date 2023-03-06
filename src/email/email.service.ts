@@ -19,6 +19,8 @@ export class EmailService {
   }
 
   async returnConfig() {
-    return this.configService.get('PRIVATE_KEY');
+    return {
+      privatekey: this.configService.get('PRIVATE_KEY'),
+    };
   }
 }
